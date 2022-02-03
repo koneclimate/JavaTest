@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "c0fc8c58-a491-46a7-b738-bada240d2b37",
+		"name": "Java Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0IiwiaWF0IjoxNjQzOTA3ODIzLCJleHAiOjE2NDM5MDc5MTB9.Pozhc0_O_GPvtA-3FVVNo_tU7WlMxOdJC5aqFZSUcJUSPm8KmycENrv7IMTZSuHqFXu-su1E9i0lYtdqCyuqVg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"12345678\",\r\n    \"address\":\"4650 My Drive  Garden City New York 11530\",\r\n    \"phone\":\"0811234567\",\r\n    \"name\":\"John Doe\",\r\n    \"salary\":50100,\r\n    \"email\":\"john@test.com\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:9000/regist",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"regist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetJwt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"test\",\r\n    \"password\":\"123456789\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:9100/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9100",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
